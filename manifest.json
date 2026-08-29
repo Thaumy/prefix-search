@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "prefix-search",
+  "version": "1.0",
+  "description": "Right-click selected text to search with your configured prefixes.",
+  "permissions": ["contextMenus", "storage"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "prefix-search@example.com"
+    }
+  }
+}

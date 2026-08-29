@@ -1,0 +1,53 @@
+#ps-menu {
+  position: fixed;
+  z-index: 2147483647;
+  min-width: 160px;
+  max-width: 320px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  font-family: system-ui, sans-serif;
+  font-size: 13px;
+  padding: 4px;
+}
+
+#ps-menu .ps-title {
+  padding: 4px 8px;
+  color: #666;
+  font-size: 12px;
+  word-break: break-all;
+  max-height: 60px;
+  overflow: hidden;
+}
+
+#ps-menu button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: inherit;
+  font-size: 13px;
+}
+
+#ps-menu button:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  #ps-menu {
+    background: #2b2a33;
+    color: #f9f9fa;
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+  #ps-menu .ps-title {
+    color: #bbb;
+  }
+  #ps-menu button:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+}

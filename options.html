@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font-family: sans-serif; padding: 16px; width: 320px; }
+    label { font-weight: bold; display: block; margin: 12px 0 4px; }
+    textarea, input { width: 100%; box-sizing: border-box; padding: 4px; }
+    textarea { height: 120px; font-family: monospace; }
+    button { margin-top: 16px; }
+    #status { color: green; margin-left: 8px; }
+    .hint { color: #666; font-size: 12px; margin-top: 4px; }
+  </style>
+</head>
+<body>
+  <h3>Prefix Search</h3>
+  <label for="prefixes">Prefixes (one per line)</label>
+  <textarea id="prefixes" placeholder="pixiv&#10;yandex&#10;github"></textarea>
+  <label for="urlTemplate">Search URL template</label>
+  <input id="urlTemplate" placeholder="https://www.google.com/search?q={query}">
+  <div class="hint">{query} is replaced with "prefix selected text"</div>
+  <button id="save">Save</button><span id="status"></span>
+  <script src="options.js"></script>
+</body>
+</html>
